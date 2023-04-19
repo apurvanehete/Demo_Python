@@ -9,18 +9,18 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo 'Hello in Build stage'
-                sh 'python3 Demo4.py'
+                echo 'Hello in Build stage from Python_Exercises Branch'
+                sh 'python3 Exe_4_python.py'
             }
         }
         stage('Test') {
             steps {
-                echo 'Hello in Test'
+                echo 'Hello in Test stage from Python_Exercises Branch'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Hello in deploy'
+                echo 'Hello in deploy stage from Python_Exercises Branch'
             }
         }
     }
