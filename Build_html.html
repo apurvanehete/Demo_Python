@@ -8,14 +8,16 @@
        for (var i = 0; i < parameters.length; i++) { 
          var paramName = parameters[i].querySelector("td.name").textContent; 
          var paramValue = parameters[i].querySelector("td.input").value; 
-         parameterList += paramName + " = " + paramValue + "<br>"; 
+         parameterList = paramName + " = " + paramValue + "<br>"; 
        } 
-       document.getElementById("parameters").innerHTML = parameterList; 
+       var a = document.getElementById("parameters");
+       a.innerHTML = parameterList; 
+       
      }
     </script> 
   </head> 
   <body> 
     <h2>Job Parameters:</h2> 
-    <div id="parameters"></div> 
+    <span id="parameters"></span> 
   </body> 
 </html>
