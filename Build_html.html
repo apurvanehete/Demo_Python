@@ -4,19 +4,15 @@
     <title>Job Parameters</title>
   </head> 
   <body>
-    <h3>My HTML Page
+    <h3>My HTML Page </h3> 
     <script> 
-      // Define a variable 
-      var myVariable = "Hello, world!"; 
-      // Print the variable to the console
-      console.log(myVariable); 
-      // Create a new element to display the variable 
-      var para = document.createElement("p"); 
-      var node = document.createTextNode(myVariable); 
-      para.appendChild(node); 
-      // Add the element to the page 
-      document.body.appendChild(para); 
-    </script> 
-    </h3> 
-  </body> 
+      window.onload = function() {
+       var parameterList = "Example";
+      
+       var a = document.getElementById("Demo");
+       a.innerHTML = parameterList;
+      }
+    </script>
+    <div id=Demo></div>
+  </body>
 </html>
