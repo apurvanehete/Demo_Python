@@ -1,21 +1,25 @@
-<html>
-<head>
-<script>
-window.onload = function() { 
-  var parameters = document.getElementsByClassName('setting-input'); 
-  var parameterList = ''; 
-  for (var i = 0; i < parameters.length; i++) { 
-    var paramName = parameters[i].getAttribute('name'); 
-    var paramValue = parameters[i].getAttribute('value'); 
-    parameterList += paramName + ' = ' + paramValue + '<br>'; 
-  }
-  document.getElementById('parameters').innerHTML = parameterList; 
-}
-</script> 
-</head> 
-<body> 
-  <h2>Job Parameters:</h2> 
-  <div id="parameters"></div>
-</body> 
+<html> 
+  <head> 
+    <title>Job Parameters</title> 
+    <script> 
+      window.onload = function() { 
+        var parameters = document.getElementsByClassName("setting-input"); 
+        var parameterList = ""; 
+        for (var i = 0; i < parameters.length; i++) { 
+          var paramName = parameters[i].getAttribute("name"); 
+          var paramValue = parameters[i].value; 
+          parameterList += paramName + " = " + paramValue + "<br>"; 
+        } 
+        console.log(parameterList); 
+        var stageName = "Print Job Parameters"; 
+        var stageContent = "<pre>" + parameterList + "</pre>"; 
+        var pipelineScript = "pipeline { \n stage('" + stageName + "') { \n echo " + stageContent + " \n } \n }"; 
+        document.getElementById("pipelineScript").innerHTML = pipelineScript; 
+      } 
+    </script> 
+  </head> 
+  <body> 
+    <h2>Job Parameters:</h2> 
+    <pre id="pipelineScript"></pre> 
+  </body> 
 </html>
-
