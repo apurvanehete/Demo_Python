@@ -3,18 +3,12 @@
   <head> 
     <title>Job Parameters</title> 
     <script> 
-     window.onload = function() { 
-       var parameters = document.querySelectorAll("tr.parameter"); 
-       var parameterList = ""; 
-       for (var i = 0; i < parameters.length; i++) { 
-         var paramName = parameters[i].querySelector("td.name").textContent; 
-         var paramValue = parameters[i].querySelector("td.input").value; 
-         parameterList = paramName + " = " + paramValue + "<br>"; 
-       } 
+     var xyz="hello"
+     window.onload = function() {
        var a = document.getElementById("Demo");
-       a.innerHTML = parameterList; 
+       a.innerHTML = xyz; 
        
-     }
+     };
     </script> 
   </head> 
   <body> 
